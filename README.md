@@ -21,7 +21,7 @@ sudo apt-get install php-xml
 
 * SQLite
 ```
-sudo apt-get install php-sqlite3
+sudo apt-get install php7.2-sqlite3
 ```
 
 ### Installing
