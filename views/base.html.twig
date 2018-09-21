@@ -5,23 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <title>I-Smith</title>
+        {% block stylesheets %}
             <link rel="stylesheet" type="text/css" media="screen" href="/css/normalize.css">
             <link rel="stylesheet" type="text/css" media="screen" href="/css/base.css">
             <link rel="stylesheet" type="text/css" media="screen" href="/css/header.css">
             <link rel="stylesheet" type="text/css" media="screen" href="/css/footer.css">
+        {% endblock %}
     </head>
     <body>
-        <div class="header">
-            <img src="/images/notebooks.svg" class="header__pic"/>
-            <span class="header__heading">
-                Hotel I_Smith
-            </span>
-        </div>
-        <div class="content"></div>
-        <div class="footer">
-            <div class="footer__text">
-                Created by I_Sepp ÜO - <a href="http://i-smith.ee">www.i-smith.ee</a>
-            </div>
-        </div>
+        {{ include('_header.html.twig') }}
+        <div class="content">{% block content %}{% endblock %}</div>
+        {{ include('_footer.html.twig') }}
     </body>
+    {% block javascripts %}{% endblock %}
 </html>
